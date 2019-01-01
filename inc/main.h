@@ -8,6 +8,9 @@
 #ifndef INC_MAIN_H_
 #define INC_MAIN_H_
 
+#include <stdio.h>
+#include <stdint.h>
 
+#include "arrays.h"
 
 #endif /* INC_MAIN_H_ */
