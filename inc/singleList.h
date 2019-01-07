@@ -15,4 +15,10 @@ typedef struct{
 	uint16_t *nextPointer;
 }sll_t;
 
+
+typedef struct node {
+	uint16_t val;
+	struct node *next;
+}node_t;
+
 #endif /* INC_SINGLELIST_H_ */

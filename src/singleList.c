@@ -10,6 +10,8 @@
 
 sll_t list1;
 
+
+
 void sllInit (void){
 
 	list1.key=0U;
@@ -17,3 +19,5 @@ void sllInit (void){
 	list1.nextPointer=NULL;
 
 }
+
+
