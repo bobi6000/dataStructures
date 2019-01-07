@@ -12,8 +12,7 @@ int main (void){
 
 week1Arrays();
 
-//Singly-Linked List
-//uint16_t *headSll, key, *nextPointer;
+
 
 
 
