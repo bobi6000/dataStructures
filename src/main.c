@@ -16,13 +16,29 @@ int main (void){
 //week1Arrays();
 
 head = malloc(sizeof(node_t));
+if (head == NULL) {
+       return 1;
+   }
 head->val = 4;
 head->next=NULL;
-head = malloc(sizeof(node_t));
-head->val = 12;
-head->next=NULL;
 
-printf("Singly-Linked List");
+
+head->next = malloc(sizeof(node_t));
+if (head == NULL) {
+       return 1;
+   }
+head->next->val = 12;
+head->next->next=NULL;
+
+head->next->next = malloc(sizeof(node_t));
+if (head == NULL) {
+       return 1;
+   }
+head->next->next->val = 6;
+head->next->next->next=NULL;
+
+current=head;
+printf("Singly-Linked List\n");
 while (current != NULL){
 	 printf("%d \n",current->val);
 	 current=current->next;
