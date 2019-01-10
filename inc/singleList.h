@@ -21,4 +21,11 @@ typedef struct node {
 	struct node *next;
 }node_t;
 
+
+
+extern node_t *head;
+extern node_t *current;
+
+int newList(void);
+
 #endif /* INC_SINGLELIST_H_ */

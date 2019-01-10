@@ -8,6 +8,6 @@
 #ifndef INC_ARRAYS_H_
 #define INC_ARRAYS_H_
 
-void week1Arrays (void);
+void workWithArrays (void);
 
 #endif /* INC_ARRAYS_H_ */

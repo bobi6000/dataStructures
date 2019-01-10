@@ -8,41 +8,58 @@
 
 #include "main.h"
 
-node_t *head=NULL;
-node_t *current=NULL;
+
+node_t *list1=NULL;
+
+
+void pushFront(node_t **head, uint16_t val){
+
+	 	node_t * new_node;
+	 	new_node = malloc(sizeof(node_t));
+
+	    new_node->val = val;
+	    new_node->next = *head;
+	    *head = new_node;
+
+}
+
+void popFront (node_t **head){
+
+	if(head==NULL)printf("List is empty");
+	else {
+
+		//*head=head->next;
+		free(*head);
+	}
+}
+
+void printList(node_t *head){
+	  node_t * current = head;
+
+	    while (current != NULL) {
+	        printf("%d\n", current->val);
+	        current = current->next;
+	    }
+}
 
 int main (void){
 
-//week1Arrays();
+//workWithArrays();
 
-head = malloc(sizeof(node_t));
-if (head == NULL) {
-       return 1;
-   }
-head->val = 4;
-head->next=NULL;
+//if (newList()==0U)printf("operations are ended correctly");
+//else if (newList()==1U)printf("memory allocation failed");
+//else printf("unexpected error");
 
 
-head->next = malloc(sizeof(node_t));
-if (head == NULL) {
-       return 1;
-   }
-head->next->val = 12;
-head->next->next=NULL;
+pushFront (&head,1);
+pushFront (&head,2);
+pushFront (&head,3);
 
-head->next->next = malloc(sizeof(node_t));
-if (head == NULL) {
-       return 1;
-   }
-head->next->next->val = 6;
-head->next->next->next=NULL;
+printList(head);
 
-current=head;
-printf("Singly-Linked List\n");
-while (current != NULL){
-	 printf("%d \n",current->val);
-	 current=current->next;
-}
+popFront (&head);
 
-return 0;
+printList(head);
+
+return 0U;
 }

@@ -7,7 +7,7 @@
 
 #include "main.h"
 
-void week1Arrays (void){
+void workWithArrays (void){
 	//arrayAdr+elemSize*(iElem-firstIndex)
 	uint16_t tab[10];
 	uint32_t *ptrTab,*ptrTabLast,*ptrTab2dFirst,*ptrTab2dLast1stRow,*ptrTab2dFirst2ndRow,*ptrTab2dLast;
